@@ -1,0 +1,15 @@
+div.scribal-metadata
+  div.scribal-title
+    a(href= pathPrefix + 'index.html') #{metadata.title} #{metadata.version}
+
+  if metadata.authors
+    div.scribal-authors
+      each author in metadata.authors
+        span
+          a(href='mailto:' + author.email)= author.firstName + ' ' + author.lastName
+
+  if metadata.contributors
+    div.scribal-contributors
+      each contributor in metadata.contributors
+        span
+          a(href='mailto:' + contributor.email)= contributor.firstName + ' ' + contributor.lastName

@@ -1,0 +1,43 @@
+{
+  "name": "scribal-html",
+  "version": "0.1.0",
+  "description": "Scribal HTML Generator",
+  "license": "MIT",
+  "author": {
+    "name": "Jeff Nyman",
+    "email": "jeffnyman@gmail.com"
+  },
+  "main": "index.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 5"
+  },
+  "scripts": {
+    "test": "mocha test/lib/**/*.spec.js --recursive",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/lib/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffnyman/scribal-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffnyman/scribal-html/issues"
+  },
+  "homepage": "https://github.com/jeffnyman/scribal-html#readme",
+  "dependencies": {
+    "bash-color": "0.0.4",
+    "fs-extra": "^1.0.0",
+    "lodash": "^4.17.4",
+    "pug": "^2.0.0-beta6",
+    "scribal-markdown": "^1.0.0",
+    "scribal-reader": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}

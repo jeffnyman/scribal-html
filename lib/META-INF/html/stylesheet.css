@@ -1,0 +1,133 @@
+body {
+  background: #23232E;
+  font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #7BA1AD;
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.active {
+  font-weight: bold;
+  color: #BBB529;
+}
+
+.scribal-title {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+.scribal-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.scribal-authors a {
+  color: #CC7832;
+}
+
+.scribal-contributors a {
+  color: #BBB529;
+}
+
+.scribal-container {
+}
+
+.scribal-metadata {
+}
+
+.scribal-step {
+}
+
+.scribal-main {
+  background: #373743;
+  float: right;
+  width: 73%;
+}
+
+.scribal-feature-name {
+  font-size: x-large;
+  color: #ffffff;
+}
+
+.scribal-tag {
+    display: inline-block;
+    margin-right: 0.5em;
+    color: #BBB529;
+}
+
+.scribal-scenario-definition, .scribal-examples {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.scribal-scenario-definition-name, .scribal-examples-name {
+  font-size: large;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+
+.scribal-step-keyword {
+  color: #CC7832;
+  font-weight: normal;
+  display: inline-block;
+  text-align: right;
+  margin-right: 0;
+  width: 5em;
+  vertical-align: top;
+}
+
+.scribal-step-text {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.scribal-examples tr, .scribal-step tr {
+  border-left: 2px dotted #CC7832;
+}
+
+.scribal-examples td, .scribal-step td {
+  border-right: 2px dotted #CC7832;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.scribal-examples th, .scribal-step th {
+  border-right: 2px dotted #CC7832;
+  font-weight: normal;
+  color: #9876AA;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.scribal-doc-string {
+  color: #6A8759;
+}
+
+.scribal-spec-tree {
+  background: #373743;
+  float: left;
+  width: 25%;
+}
+
+.scribal-spec-tree a:hover {
+    color: #CC7832;
+}
+
+.scribal-spec-tree ul {
+    padding-left: 2em;
+}
+
+.scribal-spec-tree-file {
+  color: white;
+  text-decoration: none;
+}
+
+.scribal-spec-tree-directory {
+  color: #7BA1AD;
+  text-decoration: none;
+}

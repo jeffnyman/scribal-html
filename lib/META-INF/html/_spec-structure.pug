@@ -1,0 +1,15 @@
+mixin printNode(obj)
+  if obj && obj.type === 'file'
+    li
+      a.scribal-spec-tree-file(href= pathPrefix + obj.path + '.html', class= obj.path === path ? 'active' : null)= obj.displayName
+  else if obj && obj.type === 'directory'
+    li
+      a.scribal-spec-tree-directory(href= pathPrefix + obj.path + '/index.html', class= obj.path === path ? 'active' : null)= obj.displayName
+      ul
+        each child in obj.children
+          +printNode(child)
+
+aside.scribal-spec-tree
+  ul
+    each child in specStructure.children
+      +printNode(child)

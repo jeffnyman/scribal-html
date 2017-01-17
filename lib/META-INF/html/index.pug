@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title #{metadata.title} #{metadata.version}
+    style
+      include stylesheet.css
+
+  body
+    div.scribal-container
+      include _metadata.pug
+      include _spec-structure.pug
+
+      main.scribal-main
+        div.scribal-markdown !{summary}

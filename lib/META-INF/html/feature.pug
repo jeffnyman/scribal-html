@@ -1,0 +1,54 @@
+mixin printStep(step)
+  div.scribal-step
+    span.scribal-step-keyword= step.keyword
+    span.scribal-step-text= step.text
+      if step.argument && step.argument.type == 'DataTable'
+        table.scribal-data-table
+           each row in step.argument.rows
+            tr
+              each cell in row.cells
+                td= cell.value
+      if step.argument && step.argument.type == 'DocString'
+        pre.scribal-doc-string= step.argument.content
+
+doctype html
+html
+  head
+    title #{metadata.title} #{metadata.version}
+    style
+      include stylesheet.css
+
+  body
+    div.scribal-container
+      include _metadata.pug
+      include _spec-structure.pug
+
+      main.scribal-main
+        div.scribal-feature-name #{source.feature.keyword}: #{source.feature.name}
+
+        div.scribal-feature-description.scribal-markdown !{source.feature.description}
+
+        each child in source.feature.children
+          div.scribal-scenario-definition
+            if child.tags
+              each tag in child.tags
+                div.scribal-tag= tag.name
+            div.scribal-scenario-definition-name= child.keyword + ': ' + child.name
+            div !{child.description}
+
+            if child.steps
+              each step in child.steps
+                +printStep(step)
+
+            if child.examples
+              each example in child.examples
+                div.scribal-examples
+                  div.scribal-examples-name= example.keyword + ': ' + example.name
+                  table.scribal-data-table
+                    tr
+                      each cell in example.tableHeader.cells
+                        th= cell.value
+                    each row in example.tableBody
+                      tr
+                        each cell in row.cells
+                          td= cell.value
